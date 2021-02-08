@@ -1,6 +1,9 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
+const utils = require("./utils/utils");
+const geocode = require("./utils/geocode");
+const weather = require("./utils/weather");
 
 const app = express();
 
@@ -38,17 +41,53 @@ app.get("/about", (req, res) => {
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
-    helpText: "Help Text Template",
+    helpText: "No help here.",
     name: "Luis Hermida",
   });
 });
 
 app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: "You must provide an address.",
+    });
+  }
+
+  const address = req.query.address;
+  geocode.getCoordinates(
+    address,
+    (error, { location, latitude, longtitude } = {}) => {
+      if (error) {
+        return res.send({ error });
+      }
+      weather.getWeather(
+        latitude,
+        longtitude,
+        (error, { description, temperature, feelslike } = {}) => {
+          if (error) {
+            return res.send({ error });
+          }
+          res.send({
+            location,
+            description,
+            temperature,
+            feelslike,
+          });
+        }
+      );
+    }
+  );
+});
+
+app.get("/products", (req, res) => {
+  if (!req.query.search) {
+    return res.send({
+      error: "You must provide a search term.",
+    });
+  }
+
   res.send({
-    location: "Monterrey",
-    description: "Partly cloudy",
-    temperature: 18,
-    feelsLike: 18,
+    products: [],
   });
 });
 

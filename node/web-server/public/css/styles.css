@@ -40,3 +40,28 @@ footer {
   width: 250px;
   height: 100%;
 }
+
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #888;
+  background: #888;
+  color: white;
+  padding: 8px;
+}
+
+.weather {
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.error {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}

@@ -1,4 +1,4 @@
-// DOM
+// DOM variables
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const statusText = document.querySelector("#status-text");
@@ -22,19 +22,17 @@ weatherForm.addEventListener("submit", (event) => {
 
 // Fetch Weather function
 const getWeather = (location) => {
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      response.json().then((data) => {
-        statusText.textContent = "";
-        if (data.error) {
-          errorText.style.display = "block";
-          errorText.textContent = data.error;
-        } else {
-          weatherText.style.display = "block";
-          weatherText.textContent = `Weather in ${data.location} is ${data.description} 
+  fetch(`/weather?address=${location}`).then((response) => {
+    response.json().then((data) => {
+      statusText.textContent = "";
+      if (data.error) {
+        errorText.style.display = "block";
+        errorText.textContent = data.error;
+      } else {
+        weatherText.style.display = "block";
+        weatherText.textContent = `Weather in ${data.location} is ${data.description} 
           with a temprature of ${data.temperature} C° that feels like ${data.feelslike} C°`;
-        }
-      });
-    }
-  );
+      }
+    });
+  });
 };

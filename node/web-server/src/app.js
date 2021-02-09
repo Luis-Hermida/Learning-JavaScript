@@ -1,7 +1,6 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
-const utils = require("./utils/utils");
 const geocode = require("./utils/geocode");
 const weather = require("./utils/weather");
 

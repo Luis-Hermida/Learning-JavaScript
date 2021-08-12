@@ -1,0 +1,125 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+li .active-play {
+  background-color: #F44336;
+}
+
+li .active-play:hover {
+  background-color: rgb(216, 59, 48);
+}
+
+li .active-play:active {
+  background-color: rgb(139, 40, 33);
+}
+
+.game-header p {
+  margin: 0;
+}
+
+.step-button,
+.reset-button {
+  background: rgb(76, 175, 80);
+  color: #fff;
+  min-height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  vertical-align: middle;
+  border-radius: 3px;
+  border: 0px;
+  margin-bottom: 4px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.step-button:hover,
+.reset-button:hover {
+  cursor: pointer;
+  background: rgb(67, 151, 70);
+}
+
+.step-button:active,
+.reset-button:active {
+  cursor: pointer;
+  background: rgb(39, 88, 41);
+  transform: translateY(1px);
+}
+
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 68px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 68px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.winner {
+  color: red;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .game-board {
+    display: block;
+    margin: auto;
+  }
+
+  .game-info {
+    margin: 0;
+  }
+
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ol,
+  li {
+    padding: 0;
+    list-style-type: none;
+  }
+}

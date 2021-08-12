@@ -1,0 +1,24 @@
+span {
+  position: absolute;
+  background: url(https://i.imgur.com/4ixCC8w.png);
+  pointer-events: none;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  animation: animate 2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}

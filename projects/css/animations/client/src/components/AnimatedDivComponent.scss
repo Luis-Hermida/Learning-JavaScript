@@ -1,0 +1,109 @@
+.animated-div {
+  background: rgb(17, 17, 17);
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate-div 6s linear infinite;
+  }
+
+  &:hover span:nth-child(1) {
+    background: rgba(0, 0, 255, 0.8);
+    border: 0;
+  }
+
+  span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate-div-reverse 4s linear infinite;
+  }
+
+  &:hover span:nth-child(2) {
+    background: rgba(0, 0, 255, 0.8);
+    border: 0;
+  }
+
+  span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate-div 10s linear infinite;
+  }
+
+  &:hover span:nth-child(3) {
+    background: rgba(0, 0, 255, 0.8);
+    border: 0;
+  }
+}
+
+.square-content {
+  position: relative;
+  padding: 40px 60px;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 80%;
+
+  .button {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    padding: 6px 18px;
+    font-weight: 600;
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+
+    &:hover {
+      background: #fff;
+      color: #333;
+    }
+  }
+}
+
+@keyframes animate-div {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-div-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

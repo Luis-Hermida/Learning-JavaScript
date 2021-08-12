@@ -1,0 +1,101 @@
+html,
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+
+h1,
+h2,
+h3 {
+  margin: 5px;
+}
+
+.error-text {
+  color: #f44336;
+}
+
+.header {
+  text-align: center;
+  font-size: 30px;
+  margin: 32px 0;
+}
+
+.search-form {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 40%;
+  border-top: 20px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+  background-color: #fafafa;
+}
+
+.card-list {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-profile {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 16px;
+  background-color: #fafafa;
+  height: 75px;
+}
+
+.profile-picture {
+  width: 75px;
+}
+
+.info {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.name {
+  margin-top: 4%;
+  font-size: 125%;
+  width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 625px) {
+  .form-button,
+  .form-input {
+    margin: 0 auto 10px auto;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .card-profile {
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+    height: 150px;
+  }
+
+  .profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+  }
+
+  .info {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .name {
+    margin: 5px;
+    font-size: 125%;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

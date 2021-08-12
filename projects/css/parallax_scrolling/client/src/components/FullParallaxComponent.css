@@ -1,0 +1,74 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  z-index: 10;
+  mix-blend-mode: color;
+}
+
+.section:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10;
+}
+
+.section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+#text {
+  position: relative;
+  color: #fff;
+  font-size: 10em;
+  z-index: 1;
+}
+
+#road {
+  z-index: 2;
+}
+
+.fill-text {
+  color: white;
+  font-size: 2em;
+  margin: 5% 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #text {
+    visibility: hidden;
+  }
+}

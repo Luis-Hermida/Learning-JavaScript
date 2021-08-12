@@ -1,0 +1,16 @@
+input {
+  margin: 8px 0;
+}
+
+label {
+  font-weight: 700;
+}
+
+.container {
+  margin: 10px 20px;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: 400;
+}

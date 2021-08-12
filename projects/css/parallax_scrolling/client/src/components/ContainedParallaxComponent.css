@@ -1,0 +1,7 @@
+.parallax {
+  background: url("https://i.imgur.com/welfgmB.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+  margin: 20px 0;
+}

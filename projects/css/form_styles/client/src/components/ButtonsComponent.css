@@ -1,0 +1,135 @@
+.liquid-section,
+.ripple-section {
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/*
+LIQUID BUTTON
+*/
+
+.liquid-section a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.liquid-section a span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+
+.liquid-section a .liquid {
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 100%;
+  height: 300px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.liquid-section a .liquid:hover {
+  top: -200px;
+  cursor: pointer;
+}
+
+.liquid-section a .liquid:before,
+.liquid-section a .liquid:after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.liquid-section a .liquid:before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.liquid-section a .liquid:after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/*
+RIPPLE BUTTON
+*/
+
+.ripple-section a {
+  position: relative;
+  display: inline-block;
+  padding: 18px 48px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 4px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #7562c8, #55e7fc);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.ripple-section span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate-ripple 1s linear infinite;
+}
+
+@keyframes animate-ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+/*
+MOBILE MEDIA QUERY
+*/
+
+@media only screen and (max-width: 600px) {
+  .liquid-section a {
+    width: 150px;
+  }
+}

@@ -1,0 +1,70 @@
+.box {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #111;
+  float: left;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: #1d1d1d;
+  box-shadow: 0 1px 4px #000;
+  transition: 1s ease-in;
+}
+
+.box:hover:before {
+  transition: 0s ease-in-out;
+}
+
+.box:nth-child(9n + 1):hover:before {
+  background-color: #f00;
+  box-shadow: 0 0 3px #f00, 0 0 10px #f00;
+}
+
+.box:nth-child(9n + 2):hover:before {
+  background-color: #0f0;
+  box-shadow: 0 0 3px #0f0, 0 0 10px #0f0;
+}
+
+.box:nth-child(9n + 3):hover:before {
+  background-color: #00f;
+  box-shadow: 0 0 3px #00f, 0 0 10px #00f;
+}
+
+.box:nth-child(9n + 4):hover:before {
+  background-color: #ff0;
+  box-shadow: 0 0 3px #ff0, 0 0 10px #ff0;
+}
+
+.box:nth-child(9n + 5):hover:before {
+  background-color: #0ff;
+  box-shadow: 0 0 3px #0ff, 0 0 10px #0ff;
+}
+
+.box:nth-child(9n + 6):hover:before {
+  background-color: #f0f;
+  box-shadow: 0 0 3px #f0f, 0 0 10px #f0f;
+}
+
+.box:nth-child(9n + 7):hover:before {
+  background-color: #e91e63;
+  box-shadow: 0 0 3px #e91e63, 0 0 10px #e91e63;
+}
+
+.box:nth-child(9n + 8):hover:before {
+  background-color: #00ffad;
+  box-shadow: 0 0 3px #00ffad, 0 0 10px #00ffad;
+}
+
+.box:nth-child(9n + 9):hover:before {
+  background-color: #f45103;
+  box-shadow: 0 0 3px #f45103, 0 0 10px #f45103;
+}
